@@ -36,9 +36,6 @@ CPM_InitModule(${CPM_MODULE_NAME})
 #------------------------------------------------------------------------------
 # GLFW
 #------------------------------------------------------------------------------
-set(GLFW_BUILD_EXAMPLES OFF)
-set(GLFW_BUILD_TESTS OFF)
-set(GLFW_INSTALL OFF)
 
 set(GLFW_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/glfw)
 CPM_EnsureRepoIsCurrent(
@@ -47,6 +44,10 @@ CPM_EnsureRepoIsCurrent(
   GIT_TAG "3.2.1"
   USE_CACHING TRUE
   )
+
+set(GLFW_BUILD_EXAMPLES OFF)
+set(GLFW_BUILD_TESTS OFF)
+set(GLFW_INSTALL OFF)
 
 add_subdirectory(${GLFW_DIR})
 
